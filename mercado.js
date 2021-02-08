@@ -38,18 +38,19 @@ const aumentaEstoque = (numeroDeUnidadesRecebidas) => {
 const daDescontoParaLojaInteira = (numeroEmReiasDeDesconto) => {
   listaDeProdutos.map((valorDoProduto) => {});
 };
+
+const aumentarPrecoPorcentagem = (porcentagemAumento) => {
+  listaDeProdutos.map((produto) => {
+    produto.preco *= 1 + porcentagemAumento / 100;
+  });
+};
+// aumentarPrecoPorcentagem(30);
+
 console.log("antes", listaDeProdutos);
 aumentarPrecoPorcentagem(100);
 console.log("depois", listaDeProdutos);
 aumentarPrecoPorcentagem(100);
-console.log("mais depois ainda", listaDeProdutos);
-
-const aumentarPrecoPorcentagem = (porcentagemAumento) => {
-  listaDeProdutos.map(produto => {
-    return produto.preco * (1 + porcentagemAumento/100);
-  });
-}
-aumentarPrecoPorcentagem(30);
+// console.log("mais depois ainda", listaDeProdutos);
 
 // 0a Missão Criar uma função que dá desconto em reais todos items
 /* 1a Missão Criar um array com o nome de todos os produtos disponíveis no mercado.(Map) */
