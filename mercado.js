@@ -39,14 +39,21 @@ const daDescontoParaLojaInteira = (numeroEmReiasDeDesconto) => {
   listaDeProdutos.map((valorDoProduto) => {});
 };
 console.log("antes", listaDeProdutos);
-aumentaEstoque(8);
+aumentarPrecoPorcentagem(100);
 console.log("depois", listaDeProdutos);
-aumentaEstoque(8);
+aumentarPrecoPorcentagem(100);
 console.log("mais depois ainda", listaDeProdutos);
+
+const aumentarPrecoPorcentagem = (porcentagemAumento) => {
+  listaDeProdutos.map(produto => {
+    return produto.preco * (1 + porcentagemAumento/100);
+  });
+}
+aumentarPrecoPorcentagem(30);
 
 // 0a Missão Criar uma função que dá desconto em reais todos items
 /* 1a Missão Criar um array com o nome de todos os produtos disponíveis no mercado.(Map) */
-/* 2a Missão Aumentar o preço de todos os itens em 20%, mostrando o índice do item no array */
+/* 2a Missão Aumentar o preço de todos os itens em x%, mostrando o índice do item no array */
 /* 3a Missão Criar um array com itens que custam mais que 20 R$ (filter) */
 /* 4a Missão Devolver um item a partir de seu nome (find)*/
 // 5a Alterar o estoque de um item (find)
